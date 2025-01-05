@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Buy ticket</title>
+  </head>
+  <body>
+    <h1>Buy a ticket for $show_name</h1>
+    <form action="/confirm_buy_ticket" method="get">
+      <input type="hidden" id="show_id" name="show_id" value="$id" />
+
+      <div>Date of performance: $date</div>
+      <div>Price per ticket: $price</div>
+      <div>Available seats: $available_seats</div>
+
+      <label for="customer_name">Your name:</label><br />
+      <input
+        type="text"
+        id="customer_name"
+        name="customer_name"
+        required
+      /><br /><br />
+
+      <label for="number_of_tickets">Number of tickets:</label><br />
+      <input
+        type="number"
+        id="number_of_tickets"
+        name="number_of_tickets"
+        min="0"
+        max="$available_seats"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Buy a ticket" />
+    </form>
+
+    <a href="/">Back to the main page</a>
+  </body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add Show</title>
+  </head>
+  <body>
+    <h1>Add a New Show</h1>
+    <form action="confirm_part">
+      <label for="show_name">Name of the show:</label><br />
+      <input type="text" id="show_name" name="show_name" required /><br /><br />
+
+      <label for="date">Performance date (yyyy-mm-dd):</label><br />
+      <input
+        type="date"
+        id="date"
+        name="date"
+        min="$today"
+        required
+      /><br /><br />
+
+      <label for="available_seats">Available seats:</label><br />
+      <input
+        type="number"
+        id="available_seats"
+        name="available_seats"
+        min="1"
+        required
+      /><br /><br />
+
+      <label for="price">Price ticket:</label><br />
+      <input
+        type="number"
+        id="price"
+        name="price"
+        min="1"
+        required
+      /><br /><br />
+
+      <input type="submit" value="Add Show" />
+    </form>
+    <br />
+    <h1>Shows list:</h1>
+    <table cellspacing="10">
+      <tr>
+        <th>Show Number</th>
+        <th>Show name</th>
+        <th>Show Date</th>
+        <th>Available Seats</th>
+        <th>Price</th>
+        <th>Delete</th>
+      </tr>
+      $events
+    </table>
+    <br />
+    <a href="/">Back to the main page</a>
+  </body>
+</html>
