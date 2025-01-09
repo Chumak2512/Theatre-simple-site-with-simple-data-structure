@@ -28,9 +28,8 @@ sudo apt-get update
 ```
 ### 2. Install Required Packages
 Install the necessary tools and services:
-
-```bash
 Copy code
+```bash
 sudo apt-get install sudo -y
 sudo apt-get install mariadb-server -y
 sudo apt install ncat -y
